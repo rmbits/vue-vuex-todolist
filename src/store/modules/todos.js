@@ -41,7 +41,8 @@ const actions = {
         commit
     }, e) {
         //Get selected number
-        const limit = parseInt(e.target.options[e.target.options.selectedIndex].innerText);
+        //const limit = parseInt(e.target.options[e.target.options.selectedIndex].innerText);
+        const limit = parseInt(e.target.value);
 
         const response = await axios.get(
             `http://jsonplaceholder.typicode.com/todos?_limit=${limit}`);
